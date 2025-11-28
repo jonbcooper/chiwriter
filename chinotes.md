@@ -1,6 +1,6 @@
 # ChiWriter notes
 
-The program files can be obtained from: https://horstmann.com/ChiWriter/
+The program files can be obtained from: [https://horstmann.com/ChiWriter/](https://horstmann.com/ChiWriter/) 
 
 Install **DosBox**
 
@@ -8,9 +8,9 @@ If you extract all the ChiWriter files in a folder called DOS, they will go into
 
 ***
 
-The following command should start DosBox, mount the DOS subdirectory as the windows C: drive, move to the DOS folder and start ChiWriter. Files will be saved in the DOS folder.  
+The following command should start DosBox, mount the DOS subdirectory as the windows C: drive, move to the DOS folder and start ChiWriter. Files will be saved in the DOS folder and the DOS window will exit when ChiWriter exits. 
 
-	dosbox -c "mount c: ~/DOS" -c "c:" -c "c:\cw4\cw.exe"
+	dosbox -c "mount c: ~/DOS" -c "c:" -c "c:\cw4\cw.exe" -c "exit"
 
 <u>Hint</u>: Toggle Alt-enter to full-screen it. 
 
@@ -20,7 +20,7 @@ The following command should start DosBox, mount the DOS subdirectory as the win
 
 	xdotool sleep 3 type --delay 50 "$(xclip -o -selection clipboard)"
 
-This command gives you 3 seconds to move the mouse into the ChiWriter window and click a few times exactly where you want the text to be inserted. I suggest clicking the top-left icon of the ChiWriter window first to say "Layer" -> "Always on top" to facilitate doing this step quickly. With a short piece of text, the "--delay 50" is not needed but with a bigger chunk, it helps the letters to arrive in the right order by putting a 50 millisecond delay between each keystroke. This method does require xdotool and xclip to be installed first, which is easily done with a package manager. 
+This command gives you 3 seconds to move the mouse into the ChiWriter window and click a few times exactly where you want the text to be inserted. I suggest clicking the top-left icon of the ChiWriter window first to say "Layer" -> "Always on top" to facilitate doing this step quickly. With a short piece of text, the "--delay 50" is not needed but with a bigger chunk, it helps the letters to arrive in the right order by putting a 50 millisecond delay between each keystroke. If you accidentally click the mouse while the clipboard text is being 'typed in', the insertion point will change and pure chaos will reign. Just delete the inserted text and start again. This method does require xdotool and xclip to be installed first, which is easily done with a package manager. 
 
 The above command can be put into a button in your favorite file manager for easy execution when desired. 
 
@@ -55,4 +55,4 @@ Also, in the file /etc/dosemu/dosemu.conf the keyboard settings need to say $_la
 The default directory in which ChiWriter should look for the documents is set in Options -> Global e.g. use '.' for the current folder or '..' for the parent directory. 
 
 
-<small>There are newer versions of DosBox and dosemu which I am sure are better but they won't install on my ancient machine.</small> 
+<small>There are newer versions of DosBox (DosBox-X) and dosemu (dosemu2) which I am sure are better but they won't install easily on my ancient machine.</small> 
