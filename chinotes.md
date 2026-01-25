@@ -56,3 +56,10 @@ The default directory in which ChiWriter should look for the documents is set in
 
 
 <small>There are newer versions of DosBox (DosBox-X) and dosemu (dosemu2) which I am sure are better but they won't install easily on my ancient machine.</small> 
+
+<b>Other tips and tricks</b>
+
+<u>To get &angst; symbol</u> enter Alt-F, Alt-X and shift-@. It is in the extended font which can be got to from View&rarr;Font chart by pressing Alt-X until it extended fonts become visible. This works in the standard, small, italics and bold fonts. 
+
+<u>Non-expanding space</u> or tie is the t character in the symbol font i.e. F6 t will do it.  
+
